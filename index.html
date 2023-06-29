@@ -108,7 +108,7 @@
         </div>
     </div>
 
-    <a href="#section1" class="back-to-top">&#8593;</a>
+    <a href="#" class="back-to-top">&#8593;</a>
 
     <script>
         window.addEventListener('scroll', function () {
@@ -133,15 +133,12 @@
         });
 
         // Smooth scroll to section
-        document.addEventListener('click', function (event) {
-            if (event.target.matches('a[href^="#"]')) {
-                event.preventDefault();
-                var target = document.querySelector(event.target.getAttribute('href'));
-                window.scrollTo({
-                    top: target.offsetTop,
-                    behavior: 'smooth'
-                });
-            }
+        document.querySelector('.back-to-top').addEventListener('click', function (event) {
+            event.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
         });
     </script>
 </body>
